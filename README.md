@@ -9,7 +9,7 @@ A [remastered](https://github.com/leecheeyong/math-game) math challenge game mad
 
 <details>
   <summary>
-<h2>Demo</h2>
+<h2>Images</h2>
   </summary>
 <img src="demo.png" width="600px">
 <img src="demo2.png" width="600px">
