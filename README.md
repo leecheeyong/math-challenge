@@ -7,7 +7,10 @@ A [remastered](https://github.com/leecheeyong/math-game) math challenge game mad
 - ⏰ Time count
 - 📶 QPS (Questions per second)
 
-## Demo
+<details>
+  <summary>
+<h2>Demo</h2>
+  </summary>
 <img src="demo.png" width="600px">
 <img src="demo2.png" width="600px">
-
+</details>
