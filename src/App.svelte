@@ -8,6 +8,7 @@
   var status = "Solve me !!";
   var ans;
   var streak = 0;
+  var answered = 0;
   var pastQuestions = [];
   var stopped = false;
   const operators = {
@@ -21,9 +22,11 @@
           stopCount(); setTimeout(() => { startCount(); status = "Solve me !" }, 1500);
           pastQuestions.push(time);
           status = "Correct !"
+          answered+= 1;
           streak+= 1;
       }else {
           status = "Wrong"
+          streak = 0;
           setTimeout(() => { status = "Solve me !" }, 1500);
       }
   }
@@ -79,7 +82,7 @@
   {#if time}
   {#if stopped}
     <p>Result</p>
-    <h2 style="margin-bottom:10px; font-family:Arial, Helvetica, sans-serif;">Streak: {streak}<br>QPS: {(pastQuestions.reduce((sum, a) => sum + a, 0) / 1000 / pastQuestions.length).toFixed(0) }</h2>
+    <h2 style="margin-bottom:10px; font-family:Arial, Helvetica, sans-serif;">Streak: {streak}<br>Score: {answered}<br>QPS: {(pastQuestions.reduce((sum, a) => sum + a, 0) / 1000 / pastQuestions.length).toFixed(0) }</h2>
   {:else}
   <p>{stopwatch}</p>
   <h1>{question}</h1>
